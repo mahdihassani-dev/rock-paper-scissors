@@ -13,6 +13,9 @@ os.makedirs('rock', exist_ok=True)
 os.makedirs('paper', exist_ok=True)
 os.makedirs('scissors', exist_ok=True)
 
+# Count of each gesture image
+IMG_SIZE = 5000
+
 # Function to preprocess landmarks and save as image
 def preprocess_and_save_landmarks(landmarks, frame, save_path, img_size=128):
     # Get the frame dimensions
@@ -68,7 +71,7 @@ while True:
         cv2.putText(frame, f"Capturing {gesture} images: {img_count}/5000", 
                     (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
 
-    if results.multi_hand_landmarks and gesture is not None and img_count < 5000:
+    if results.multi_hand_landmarks and gesture is not None and img_count < IMG_SIZE:
         for hand_landmarks in results.multi_hand_landmarks:
             # Draw hand landmarks on the frame
             mp_drawing.draw_landmarks(frame, hand_landmarks, mp_hands.HAND_CONNECTIONS)
@@ -81,7 +84,7 @@ while True:
             preprocess_and_save_landmarks(landmarks, frame, save_path)
             img_count += 1
 
-            if img_count >= 5000:
+            if img_count >= IMG_SIZE:
                 gesture = None
                 img_count = 0
 
