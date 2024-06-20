@@ -50,7 +50,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]]
+![Product Name Screen Shot][product-screenshot]
 
 extract landmarks from hand in a frame, use it as the input of the model and predict which game gesture does It show and based on that show the ai move to be the winner all the times
 
