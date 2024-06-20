@@ -70,13 +70,23 @@ the main libraries used in this project are opencv-python, mediapipe and tensorf
 
 ## CollectDataset
 
-_To create your own dataset you can simply connect your webcam and use CollectingDataset.py file to capture your hand in each gesture and at the end have 5000 picture of each one._
+_To create your own dataset you can simply connect your webcam and use CollectingDataset.py file to capture your hand in each gesture and at the end have 5000 pictures of each one._
 
 * run in terminal
    ```
-   python CollectingDataset.py
+   python collectingDataset.py
    ```
-betterDatasetTip : try to change your hand position in each game gesture to have better and more complete dataset
+
+you may want to change the number of each gesture pictures from 5000 to anything else.so just change this line :
+
+* Count of each gesture image
+   ```python
+     IMG_SIZE = 5000
+   ```
+
+
+
+betterDatasetTip : try to change your rotate when capturing your hand in each game gesture to have better and more complete dataset
 
 if you want prepared dataset you can use <a href="https://www.kaggle.com/datasets/mahdihassani83/rock-paper-scissors-points">mine</a>
 
@@ -85,7 +95,7 @@ if you want prepared dataset you can use <a href="https://www.kaggle.com/dataset
 
 ## Train
 
-_After providing dataset you can simply use train.ipynb file to train your neural network and save your model._
+_After providing dataset you can simply use **train.ipynb** file to train your neural network and save your model._
 
 my model is also availabe <a href="https://www.kaggle.com/models/mahdihassani83/rock-paper-scissors-model">here</a>.you can download and enjoy It :)
 
@@ -93,7 +103,7 @@ my model is also availabe <a href="https://www.kaggle.com/models/mahdihassani83/
 
 ## Test
 
-_After providing your model you may simply run test.py file to test your model._
+_After providing your model you could connect your webcam and run test.py file to test your model._
 
 my model is also availabe <a href="https://www.kaggle.com/models/mahdihassani83/rock-paper-scissors-model">here</a>.you can download and enjoy It :)
 
