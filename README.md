@@ -54,6 +54,9 @@
 
 extract landmarks from hand in a frame, use it as the input of the model and predict which game gesture does It show and based on that show the ai move to be the winner all the times
 
+<br />
+
+
 ## Prerequisites
 
 the main libraries used in this project are opencv-python, mediapipe and tensorflow using python version 3.11.5 64bit
@@ -61,6 +64,9 @@ the main libraries used in this project are opencv-python, mediapipe and tensorf
   ```py
   pip install requirements.txt
   ```
+
+<br />
+
 
 ## CollectDataset
 
@@ -74,6 +80,7 @@ betterDatasetTip : try to change your hand position in each game gesture to have
 
 if you want prepared dataset you can use <a href="https://www.kaggle.com/datasets/mahdihassani83/rock-paper-scissors-points">mine</a>
 
+<br />
 
 
 ## Train
@@ -82,6 +89,7 @@ _After providing dataset you can simply use train.ipynb file to train your neura
 
 my model is also availabe <a href="https://www.kaggle.com/models/mahdihassani83/rock-paper-scissors-model">here</a>.you can download and enjoy It :)
 
+<br />
 
 ## Test
 
